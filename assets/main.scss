@@ -7,9 +7,13 @@
 
 .post-content {
 
+  h1 {
+    color: $brand-color;
+  }
+
   h2 {
     @include relative-font-size(2);
-    color: #402060;
+    color: $brand-color;
     @include media-query($on-laptop) {
       @include relative-font-size(1.75);
     }
@@ -17,7 +21,7 @@
 
   h3 {
     @include relative-font-size(1.625);
-    color: #402060;
+    color: $brand-color;
     @include media-query($on-laptop) {
       @include relative-font-size(1.375);
     }
@@ -25,7 +29,7 @@
 
   h4 {
     @include relative-font-size(1.35);
-    color: #402060;
+    color: $brand-color;
     text-decoration: underline;
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
