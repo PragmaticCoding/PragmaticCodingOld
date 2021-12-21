@@ -4,6 +4,7 @@ title:  "Kotlin - Should You?"
 date:   2021-12-11 10:33:44 -0500
 categories: kotlin
 logo: /assets/logos/Kotlin.png
+permalink: /kotlin-should-you
 excerpt: Kotlin has been described as, "The language that Java would have been if it had been designed 25 years later".  It's starting to pick up popularity, and has had a boost from being endorsed by Google for Android development.<br><br>But you're not an Android developer, so should you learn, and use, Kotlin?
 ---
 
