@@ -5,6 +5,28 @@
 @import "minima";
 
 
+a {
+  color: #7010d0;
+  text-decoration: none;
+
+  &:visited {
+    color: darken(#7010d0, 25%);
+  }
+
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
+
+  .social-media-list &:hover {
+    text-decoration: none;
+
+    .username {
+      text-decoration: underline;
+    }
+  }
+}
+
 .post-content {
 
   h1 {

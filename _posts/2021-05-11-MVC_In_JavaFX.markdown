@@ -4,9 +4,8 @@ title:  "Implementing MVC in JavaFX"
 date:   2021-05-11 12:00:00 -0500
 categories: javafx
 logo: /assets/logos/JavaFXLogo.png
+permalink: /javafx/MVC_In_JavaFX
 excerpt: Model-View-Controller is generally accepted as a good way to structure an application with a user interface.  Since JavaFX implements Reactive programming there's a natural way to incorporate MVC into a JavaFX application.  However, it doesn't seem to be widely documented and there's little evidence on the Web that many people have figured out how to do it properly.
-hangman: /assets/images/Hangman.png
-hangedman: /assets/images/HangedMan.png
 ---
 
 Model-View-Controller is generally accepted as a good way to structure an application with a user interface.  While JavaFX contains all of the classes needed to implement MVC in a natural and seamless way, it doesn't seem to be widely documented and there's little evidence on the Web that many people have figured out how to do it properly.  The fact that JavaFX supports Reactive programming makes a big difference to how you should implement MVC.

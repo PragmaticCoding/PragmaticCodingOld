@@ -1,46 +1,10 @@
 ---
 layout: page
 title: JavaFX
-permalink: /javaFX/
+permalink: /javafx/elements/
 rube: /assets/images/rube_goldberg.png
+skip_link: true
 ---
-
-## What's JavaFX?
-
-JavaFX is the modern API for creating interactive desktop applications in Java.  While it doesn't
-replace Swing, it represents a significant upgrade for the programmer as it uses reactive programming.
-
-## Is it Hard to Learn?
-
-It can be challenging.  JavaFX has never been very popular, as desktop applications have largely gone out of style, so there simply isn't a great wealth of resources out there to learn how to build applications using JavaFX.  However, if you've had experience using frameworks like React or Jetpack Compose, which are also based on reactive principles, it should be easier for you to learn.
-
-### Don't use ScreenBuilder or FXML
-
- Okay, so this is controversial and a lots of people disagree with me.  I don't use ScreenBuilder and FXML and I strongly recommend that beginners avoid it.
-
- What are these things?  "ScreenBuilder" is the graphical, drag-and-drop, tool for creating screen layouts.  The output from ScreenBuilder is a text file in an XML-like format called "FXML".
-
- It is much better to learn how to build your screen with code.  It's actually quite easy, and if you apply DRY (Don't Repeat Yourself), you'll quickly build up a library of builder and helper methods, as well as custom classes, that will strip about 90% of the boilerplate code out of your layout logic.  And this is even easier if you're using Kotlin!  The resulting pure Java/Kotlin code is easier to understand and maintain than any FXML ever will be.
-
-## Reactive programming
-
-From [Wikipedia](https://en.wikipedia.org/wiki/Reactive_programming):
-
-> Reactive programming is a declarative programming paradigm concerned with data streams and the propagation of change....
-
-> For example, in an imperative programming setting, a := b + c would mean that a is being assigned the result of b + c in the instant the expression is evaluated, and later, the values of b and c can be changed with no effect on the value of a. On the other hand, in reactive programming, the value of a is automatically updated whenever the values of b or c change, without the program having to explicit re-execute the statement a := b + c to determine the presently assigned value of a.
-
-This exactly describes how JavaFX is implemented, and how you should approach building JavaFX applications.  Somehow, this seems to have been completely missed by the programming world in general, and you won't find JavaFX included in the Wikipedia list of reactive frameworks, and no mention of the reactive nature of JavaFX is included in the [Wikipedia page about JavaFX](https://en.wikipedia.org/wiki/JavaFX).
-
-![A Rube Goldberg Machine]({{page.rube}}){:class="img-responsive" style="float: right" width="440" padding="20px"}
-Reactive programming seems to be a challenge for many programmers.  
-
-Much of your GUI code is layout and configuration, and sprinkled in with that are code snippets that define the reactive elements.  The layout code is executed immediately, but the reactive snippets are only triggered when the reactive data streams are modified.
-
-
-The resulting program feels a bit like a [Rube Goldberg machine](https://en.wikipedia.org/wiki/Rube_Goldberg_machine) in code, or like setting up dominoes to fall over.
-
-
 ## The Elements of JavaFX You Need to Master
 
 ### The Widgets
@@ -86,6 +50,6 @@ Like virtually every GUI library available, it's really, really bad to do long o
 
 **This is probably the number one issue that beginners in JavaFX (and Swing, too) struggle with at the beginning.**
 
-The most implication of this is that you cannot program linearly.  Try as hard as you like, but there's no way that you can run anything that looks like a "Function" (ie. input some data and wait for an answer) triggered from the FXAT that uses a background thread.  When you're application behaves weirdly and seems laggy or hangs, come back to this paragraph and read it carefully because this is what you're probably trying to do.
+The biggest implication of this is that you cannot program linearly.  Try as hard as you like, but there's no way that you can run anything that looks like a "Function" (ie. input some data and wait for an answer) triggered from the FXAT that uses a background thread.  When your application behaves weirdly and seems laggy or hangs, come back to this paragraph and read it carefully because this is what you're probably trying to do.
 
 JavaFX provides a handy class called "Task", which supplies a runnable which you can pass to a Thread.  When the code in the Task has been completed, it triggers a "Success" Event.  You can supply an Event Handler which be invoked when the "Success" event is triggered.  Just like any Event Handler, it will be run on the FXAT and can therefore update the GUI.  

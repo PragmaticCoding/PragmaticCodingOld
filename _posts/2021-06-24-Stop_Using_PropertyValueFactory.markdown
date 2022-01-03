@@ -109,4 +109,6 @@ In this example `p` is the `CellDataFeatures<Person, String>` object generated f
 
 Clearly, this is about the same amount of code as using `PropertyValueFactory`, but it avoids the use of reflection.  If you misspell something, you will get a compiler error and a red squiggly line in your IDE.  If you refactor `firstNameProperty()` to a new name, your IDE will adjust it automatically and the compiler will complain if something goes wrong.
 
-So that's it.  Stop using `PropertyValueFactory` right now.  It does nothing for you, and can cause you trouble in the future.  Use lambda expressions instead.
+So that's it.  
+
+Stop using `PropertyValueFactory` right now.  It does nothing for you, and can cause you trouble in the future.  Use lambda expressions instead.
