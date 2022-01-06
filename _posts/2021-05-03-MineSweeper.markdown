@@ -53,7 +53,7 @@ The Cell is an autonomous, self-contained unit.  Other than having a public meth
 
 The CellModel is fairly simple, mostly a collection of boolean properties:
 
-{% highlight java %}
+``` java
 class CellModel {
 
     private final BooleanProperty clicked = new SimpleBooleanProperty(false);
@@ -77,7 +77,7 @@ class CellModel {
         return mineCount;
     }
 }
-{% endhighlight %}
+```
 
 We need to know if the Cell contains a mine, if it's been clicked, what number to display when it's clicked (assuming it's not a mine), and whether we should show the flag to indicate that it's been right clicked.  That's all.
 
