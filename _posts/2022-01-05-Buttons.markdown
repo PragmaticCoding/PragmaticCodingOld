@@ -32,22 +32,22 @@ A *Button* is the basic control to allow the user trigger an action in a screen.
 *Button* inherits methods and properties from these important classes:
 
 Node
-: Everything in JavaFX inherits from Node, which gives most of its methods for styling, event handling and responding to mouse actions as well as location and transformation.
+: Everything in JavaFX inherits from *Node*, which gives most of its methods for styling, event handling and responding to mouse actions as well as location and transformation.
 
 Control
 :  This is the base class for user interaction controls on a screen.  This base class adds skinning, tool-tips and context menus to Node.
 
 Region
-:  All Control classes are Regions, which means that they can contain other Nodes and have layout properties like padding and borders.
+:  All *Control* classes are *Regions*, which means that they can contain other *Nodes* and have layout properties like padding and borders.
 
 Labeled
-:  In JavaFX, the Label class contains both a graphical Node and a text property, and the Labeled classes also support this same idea as the contents of the Control as a Region.
+:  In JavaFX, the *Label* class contains both a graphical *Node* and a text property, and the *Labeled* classes also support this same idea as the contents of the *Control* as a *Region*.
 
 The version 16 JavaDocs for *Button* can be found [here](https://openjfx.io/javadoc/16/javafx.controls/javafx/scene/control/Button.html)
 
 ## Layout
 
-You can think of a *Button* as styled Region with a background and a border containing a Label (which, of course, contains a Graphic and/or some text).  All of the button-like feel of a *Button* is just the styling responding to different states of the properties in the class.  
+You can think of a *Button* as styled *Region* with a background and a border containing a *Label* (which, of course, contains a Graphic and/or some text).  All of the button-like feel of a *Button* is just the styling responding to different states of the properties in the class.  
 
 These states change when:
 
@@ -195,13 +195,13 @@ When a *Button* has been set as the "default", the base colour changes to a ligh
 ***
 ## Properties
 
-*Button* has all of the standard properties of Node and Region, which define things like MaxHeight, MaxWidth, Visible, Managed and so on.  In addition, it has a few other properties which are interesting:
+*Button* has all of the standard properties of *Node* and *Region*, which define things like *MaxHeight*, *MaxWidth*, *Visible*, *Managed* and so on.  In addition, it has a few other properties which are interesting:
 
 Let's take a look at what some of those properties actually do:
 
 ### Graphic
 
-Since *Button* extends Labeled, it has two properties holding the contents.  The Graphic is simply any kind of Node that you want to put on the *Button*.  It can be an ImageView, an Icon, are something bigger and complex, like a TableView, BorderPane, or Chart.  That would probably end up with a really big *Button*, but it would still work.
+Since *Button* extends *Labeled*, it has two properties holding the contents.  The *Graphic* is simply any kind of *Node* that you want to put on the *Button*.  It can be an *ImageView*, an icon, or something bigger and complex, like a *TableView*, *BorderPane*, or *Chart*.  That would probably end up with a really big *Button*, but it would still work.
 
 Here's a sample showing how the Graphic property can be manipulated:
 
